@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mathematics Teacher Curriculum Vitae">
+    <meta name="author" content="Miguel Díaz">
+    <meta name="keywords" content="mathematics teacher, math professor, curriculum vitae, educator, algebra, geometry">
+    <title>CV - Miguel Ignacio Díaz Campaña - Math & English Teacher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables de color y efectos de tu CV original */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #f39c12;
+            --icon-color: #F1C40F; /* CAMBIADO: Amarillo suave para íconos */
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .marco {
+            width: 90%;
+            max-width: 1400px;
+            height: 90vh;
+            min-height: 600px;
+            border: 2px solid var(--primary-color);
+            border-radius: 0;
+            background-color: white;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .marco-interior {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .izquierda {
+            width: 35%;
+            border-right: 2px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(180deg, var(--primary-color) 0%, #1a252f 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .izquierda-scrollable {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        .derecha {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* SCROLLBAR PARA IZQUIERDA */
+        .izquierda-scrollable::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .izquierda-scrollable::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        .izquierda-scrollable::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            border-radius: 4px;
+        }
+
+        /* BOTÓN DONA/MENÚ HAMBURGUESA - DENTRO DE LA FOTO */
+        .dona-menu {
+            display: none;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a252f 100%);
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            z-index: 1000;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 4px;
+            padding: 8px;
+        }
+
+        .foto-contenedor:hover .dona-menu {
+            border-color: white;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+        }
+
+        .dona-menu:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-color);
+        }
+
+        .dona-line {
+            width: 20px;
+            height: 2px;
+            background-color: var(--icon-color);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .dona-menu.active .dona-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .dona-menu.active .dona-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .dona-menu.active .dona-line:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* MENÚ MÓVIL */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+        }
+
+        .mobile-menu-container {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 280px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color) 0%, #1a252f 100%);
+            z-index: 1000;
+            transition: left 0.4s ease;
+            overflow-y: auto;
+            padding: 20px;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .mobile-menu-container.active {
+            left: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-title {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .mobile-close-btn {
+            background: none;
+            border: none;
+            color: var(--icon-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .mobile-close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .mobile-nav {
+            margin-bottom: 30px;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 10px;
+            gap: 12px;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+            color: white;
+            border: none;
+            transform: translateX(5px);
+        }
+
+        .mobile-nav-link i {
+            color: var(--icon-color);
+            font-size: 1rem;
+            min-width: 25px;
+        }
+
+        .mobile-nav-link.active i {
+            color: white;
+        }
+
+        .mobile-additional-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .mobile-additional-btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            gap: 12px;
+        }
+
+        .mobile-additional-btn:hover,
+        .mobile-additional-btn.active {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            border: none;
+            transform: translateX(5px);
+        }
+
+        .mobile-additional-btn i {
+            color: var(--icon-color);
+            font-size: 0.9rem;
+            min-width: 25px;
+        }
+
+        .mobile-additional-btn.active i {
+            color: white;
+        }
+
+        .photo-container {
+            width: 170px;
+            height: 170px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            cursor: pointer;
+            perspective: 1000px;
+            transition: var(--transition);
+        }
+
+        .photo-container:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .photo-flip-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s ease;
+            transform-style: preserve-3d;
+        }
+
+        .photo-container:hover .photo-flip-inner {
+            transform: rotateY(180deg);
+        }
+
+        .photo-front, .photo-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-front {
+            background-color: #fff;
+            z-index: 2;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-front img {
+            display: block !important;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-back {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            transform: rotateY(180deg);
+            z-index: 1;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .name-display {
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block !important;
+            transition: var(--transition);
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .photo-container:hover .profile-photo {
+            transform: scale(1.1);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: none !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .photo-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #bdc3c7;
+        }
+
+        .photo-placeholder p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .contact-section-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            margin: 0 1rem 1.5rem 1rem;
+            width: calc(100% - 2rem);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .contact-section-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .contact-section-container:hover::before {
+            left: 100%;
+        }
+
+        .contact-section-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cv-section-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            margin: 0 1rem 1.5rem 1rem;
+            width: calc(100% - 2rem);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .cv-section-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .cv-section-container:hover::before {
+            left: 100%;
+        }
+
+        .cv-section-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contenedor-superior {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .foto-contenedor {
+            width: 100%;
+            display: flex !important;
+            justify-content: center;
+            background: linear-gradient(180deg, var(--primary-color) 0%, #1a252f 100%);
+            padding: 1.5rem 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+            cursor: pointer; /* AÑADIDO: Para indicar que es clickeable */
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            color: var(--accent-color);
+        }
+
+        .contact-section-container:hover .section-title,
+        .cv-section-container:hover .section-title {
+            color: white !important;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            transition: width 0.3s ease;
+        }
+
+        .contact-section-container:hover .section-title::after,
+        .cv-section-container:hover .section-title::after {
+            width: 100px;
+            background: linear-gradient(90deg, transparent, white, transparent);
+        }
+
+        .section-subtitle {
+            font-size: 0.75rem;
+            color: #bdc3c7;
+            font-weight: 300;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .contact-section-container:hover .section-subtitle,
+        .cv-section-container:hover .section-subtitle {
+            color: var(--accent-color) !important;
+            letter-spacing: 2px;
+        }
+
+        #navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: block;
+        }
+
+        #navbar li {
+            margin-bottom: 0.7rem;
+            width: 100%;
+            display: block;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.9rem 0.8rem;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+            white-space: normal;
+            text-overflow: ellipsis;
+            text-align: left;
+            cursor: pointer;
+            line-height: 1.3;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            gap: 10px;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:hover {
+            background: rgba(52, 152, 219, 0.2);
+            color: white;
+            transform: translateX(5px);
+            border-color: rgba(52, 152, 219, 0.3);
+            box-shadow: 0 3px 10px rgba(52, 152, 219, 0.2);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 3px 10px rgba(52, 152, 219, 0.4);
+        }
+
+        .nav-link i {
+            min-width: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--icon-color); /* ÍCONOS AMARILLOS SUAVES */
+            transition: var(--transition);
+        }
+
+        .nav-link:hover i,
+        .nav-link.active i {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .contact-info {
+            padding: 0.5rem 0;
+        }
+
+        .address-container {
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            padding: 0.5rem 0.4rem;
+            border-radius: 6px;
+            transition: var(--transition);
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .address-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .address-container:hover::before {
+            left: 100%;
+        }
+
+        .address-container:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(3px);
+        }
+
+        .address-container i {
+            min-width: 22px;
+            color: var(--icon-color); /* ÍCONOS AMARILLOS SUAVES */
+            font-size: 0.95rem;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 4px;
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .address-container:hover i {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .address-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex: 1;
+            z-index: 1;
+        }
+
+        .address-line {
+            font-size: 0.9rem;
+            line-height: 1.3;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .address-line:first-child {
+            font-weight: 500;
+        }
+
+        .address-line:last-child {
+            color: #bdc3c7;
+            font-size: 0.88rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.5rem 0.4rem;
+            border-radius: 6px;
+            transition: var(--transition);
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info p::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .contact-info p:hover::before {
+            left: 100%;
+        }
+
+        .contact-info p:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(3px);
+        }
+
+        .contact-info i {
+            min-width: 22px;
+            color: var(--icon-color); /* ÍCONOS AMARILLOS SUAVES */
+            font-size: 0.95rem;
+            text-align: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .contact-info p:hover i {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .contact-info span {
+            flex: 1;
+            font-size: 0.9rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            z-index: 1;
+        }
+
+        .contact-info .linkedin-link {
+            color: #3498db;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: var(--transition);
+            padding: 0.7rem 0.5rem;
+            border-radius: 8px;
+            margin-top: 0.3rem;
+            background: rgba(52, 152, 219, 0.08);
+            border: 1px solid rgba(52, 152, 219, 0.15);
+            font-size: 0.9rem;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info .linkedin-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .contact-info .linkedin-link:hover::before {
+            left: 100%;
+        }
+
+        .contact-info .linkedin-link span {
+            flex: 1;
+            font-size: 0.88rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            z-index: 1;
+        }
+
+        .contact-info .linkedin-link:hover {
+            color: white;
+            background: rgba(52, 152, 219, 0.2);
+            transform: translateX(5px);
+            border-color: rgba(52, 152, 219, 0.3);
+            box-shadow: 0 3px 8px rgba(52, 152, 219, 0.2);
+        }
+
+        .contact-info .linkedin-link i {
+            color: var(--icon-color); /* ÍCONOS AMARILLOS SUAVES */
+            transition: var(--transition);
+            font-size: 1rem;
+            flex-shrink: 0;
+            min-width: 22px;
+            z-index: 1;
+        }
+
+        .contact-info .linkedin-link:hover i {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .nombre-contenedor {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a252f 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 160px;
+        }
+
+        /* Ocultar nombre en izquierda por defecto (desktop) */
+        .contenedor-superior .nombre-contenedor {
+            display: none;
+        }
+
+        /* Mostrar nombre en derecha por defecto (desktop) */
+        .nombre-desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 160px;
+        }
+
+        .nombre {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            line-height: 1.1;
+            transition: var(--transition);
+            position: relative;
+            word-wrap: normal;
+            overflow-wrap: normal;
+            white-space: nowrap;
+            padding-bottom: 10px;
+            width: auto;
+            text-align: center;
+            display: inline-block; /* AÑADIDO: Para que el pseudo-elemento se base en el texto */
+        }
+
+        .nombre:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* CORREGIDO: Subrayado que sigue exactamente la longitud del texto */
+        .nombre::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent-color);
+            transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .nombre:hover::after {
+            width: 100%; /* Ahora el 100% es del texto, no del contenedor */
+        }
+
+        .nombre::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.8);
+            transition: width 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: blur(1px);
+        }
+
+        .nombre:hover::before {
+            width: 100%;
+        }
+
+        .nombre-subtitulo {
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #ecf0f1;
+            opacity: 0.9;
+            transition: var(--transition);
+            text-transform: uppercase;
+            word-wrap: normal;
+            overflow-wrap: normal;
+            white-space: nowrap;
+            margin-top: 0.5rem;
+            display: inline-block; /* AÑADIDO: Para consistencia */
+        }
+
+        .nombre-subtitulo:hover {
+            color: var(--accent-color);
+            opacity: 1;
+            transform: translateY(2px);
+            letter-spacing: 1.5px;
+        }
+
+        /* ÁREA SCROLLABLE DE LA DERECHA */
+        .derecha-scrollable {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 100%;
+            position: relative;
+        }
+
+        .contenido-secciones {
+            padding: 2rem 1.5rem;
+            padding-top: 15px;
+            position: relative;
+            min-height: 100%;
+        }
+
+        /* 5px debajo del nombre */
+        .contenido-seccion {
+            display: none;
+            margin-bottom: 2.5rem;
+            margin-top: 5px;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--secondary-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .contenido-seccion:first-child {
+            margin-top: 5px;
+        }
+
+        .contenido-seccion.activa {
+            display: block;
+        }
+
+        .contenido-seccion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .contenido-seccion:hover::before {
+            transform: translateX(0);
+        }
+
+        .contenido-seccion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contenido-seccion header {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            font-weight: 700;
+            width: 100%;
+            position: relative;
+            word-wrap: break-word;
+        }
+
+        .contenido-seccion header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .contenido-seccion:hover header::after {
+            width: 150px;
+        }
+
+        .contenido-seccion p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            width: 100%;
+            word-wrap: break-word;
+        }
+
+        .contenido-seccion p:first-of-type {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* SCROLLBAR PARA DERECHA */
+        .derecha-scrollable::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .derecha-scrollable::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .derecha-scrollable::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            border-radius: 4px;
+        }
+
+        .derecha-scrollable::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #2980b9 0%, #e67e22 100%);
+        }
+
+        .additional-buttons-container {
+            display: block;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+        }
+
+        .additional-btn {
+            display: flex;
+            align-items: center;
+            padding: 0.7rem 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            text-align: left;
+            transition: var(--transition);
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            margin-bottom: 0.5rem;
+            gap: 10px;
+        }
+
+        .additional-btn:last-child {
+            margin-bottom: 0;
+        }
+
+        .additional-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .additional-btn:hover::before {
+            left: 100%;
+        }
+
+        .additional-btn:hover {
+            background: rgba(243, 156, 18, 0.15);
+            color: white;
+            transform: translateX(5px);
+            border-color: rgba(243, 156, 18, 0.3);
+            box-shadow: 0 3px 10px rgba(243, 156, 18, 0.2);
+        }
+
+        /* AÑADIDO: Estilo para botones adicionales activos - COLOR DIFERENTE */
+        .additional-btn.active {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); /* Rojo diferente */
+            color: white;
+            border: none;
+            box-shadow: 0 3px 10px rgba(231, 76, 60, 0.4);
+        }
+
+        .additional-btn i {
+            min-width: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--icon-color); /* ÍCONOS AMARILLOS SUAVES */
+            transition: var(--transition);
+        }
+
+        .additional-btn:hover i {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* AÑADIDO: Estilo para íconos en botones adicionales activos */
+        .additional-btn.active i {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .marco {
+                width: 85%;
+            }
+            
+            .nombre {
+                font-size: 2.2rem;
+            }
+            
+            .nombre-subtitulo {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            html, body {
+                overflow: auto;
+                height: auto;
+            }
+            
+            body {
+                display: block;
+                padding-top: 20px; /* Reducido porque la dona está en la foto */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            /* MOSTRAR LA DONA/MENÚ HAMBURGUESA DENTRO DE LA FOTO */
+            .dona-menu {
+                display: flex;
+            }
+            
+            /* OCULTAR EL MENÚ LATERAL EN DISPOSITIVOS MÓVILES */
+            .cv-section-container {
+                display: none;
+            }
+            
+            .marco {
+                width: 95%;
+                height: auto;
+                min-height: auto;
+                flex-direction: column;
+                margin-top: 10px;
+            }
+            
+            .marco-interior {
+                flex-direction: column;
+                overflow: visible;
+            }
+            
+            .izquierda, .derecha {
+                width: 100%;
+                border: none;
+                overflow: visible;
+            }
+            
+            .izquierda {
+                border-bottom: 2px solid var(--primary-color);
+            }
+            
+            .izquierda-scrollable,
+            .derecha-scrollable {
+                overflow: visible;
+                height: auto;
+            }
+            
+            /* MOSTRAR NOMBRE EN IZQUIERDA PARA TABLETS (769px a 992px) */
+            .contenedor-superior .nombre-contenedor {
+                display: flex;
+                min-height: 140px;
+            }
+            
+            /* OCULTAR NOMBRE DE LA DERECHA PARA TABLETS */
+            .nombre-desktop {
+                display: none;
+            }
+            
+            .nombre {
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+            
+            .nombre-subtitulo {
+                font-size: 1.6rem;
+                letter-spacing: 1.5px;
+            }
+            
+            .contenido-seccion {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                padding-top: 10px; /* Reducido porque la dona está en la foto */
+            }
+            
+            .marco {
+                width: 100%;
+                margin-top: 5px;
+            }
+            
+            /* Reorganizar orden en móvil */
+            .izquierda {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .contenedor-superior {
+                order: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .foto-contenedor {
+                order: 1;
+            }
+            
+            /* Mostrar nombre en la izquierda (móvil) */
+            .contenedor-superior .nombre-contenedor {
+                display: flex;
+                order: 2;
+                min-height: 140px;
+            }
+            
+            /* Ocultar nombre de la derecha (móvil) */
+            .nombre-desktop {
+                display: none;
+            }
+            
+            .contact-section-container {
+                order: 3;
+            }
+            
+            .nombre {
+                font-size: 2rem;
+                letter-spacing: 0.5px;
+                white-space: nowrap;
+            }
+            
+            .nombre-subtitulo {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+                white-space: nowrap;
+            }
+            
+            .contenido-seccion {
+                padding: 1.5rem;
+                margin-top: 8px;
+            }
+            
+            .contenido-secciones {
+                padding-top: 12px;
+            }
+            
+            .contenido-seccion header {
+                font-size: 1.5rem;
+            }
+            
+            .photo-container {
+                width: 140px;
+                height: 140px;
+            }
+            
+            /* Ajustar dona dentro de la foto para móvil */
+            .dona-menu {
+                top: 10px;
+                right: 10px;
+                width: 35px;
+                height: 35px;
+            }
+            
+            .dona-line {
+                width: 18px;
+                height: 2px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nombre {
+                font-size: 1.6rem;
+                letter-spacing: 0.3px;
+                white-space: nowrap;
+            }
+            
+            .nombre-subtitulo {
+                font-size: 1rem;
+                letter-spacing: 0.8px;
+                white-space: nowrap;
+            }
+            
+            .nombre-contenedor {
+                padding: 1.5rem 0.5rem;
+                min-height: 120px;
+            }
+            
+            .contenido-seccion {
+                margin-top: 5px;
+            }
+            
+            .dona-menu {
+                top: 8px;
+                right: 8px;
+                width: 32px;
+                height: 32px;
+            }
+            
+            .dona-line {
+                width: 16px;
+                height: 1.5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                padding-top: 10px; /* Reducido porque la dona está en la foto */
+            }
+            
+            .nombre {
+                font-size: 1.4rem;
+                letter-spacing: 0.2px;
+            }
+            
+            .nombre-subtitulo {
+                font-size: 0.9rem;
+                letter-spacing: 0.5px;
+            }
+            
+            .contenido-seccion {
+                padding: 1rem;
+                margin-top: 5px;
+            }
+            
+            .contenido-secciones {
+                padding: 1rem;
+                padding-top: 10px;
+            }
+            
+            .contenido-seccion header {
+                font-size: 1.3rem;
+            }
+            
+            .photo-container {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .section-title {
+                font-size: 1rem;
+            }
+            
+            .additional-btn {
+                font-size: 0.75rem;
+                padding: 0.6rem 0.5rem;
+            }
+            
+            .nombre-contenedor {
+                padding: 1rem 0.5rem;
+                min-height: 100px;
+            }
+            
+            /* Ajustar menú móvil para pantallas pequeñas */
+            .mobile-menu-container {
+                width: 250px;
+            }
+            
+            /* Ajustar dona dentro de la foto */
+            .dona-menu {
+                top: 5px;
+                right: 5px;
+                width: 30px;
+                height: 30px;
+            }
+            
+            .dona-line {
+                width: 15px;
+                height: 1.5px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .nombre {
+                font-size: 1.2rem;
+                letter-spacing: 0.1px;
+            }
+            
+            .nombre-subtitulo {
+                font-size: 0.8rem;
+                letter-spacing: 0.4px;
+            }
+            
+            .contenido-seccion {
+                margin-top: 3px;
+            }
+            
+            .mobile-menu-container {
+                width: 220px;
+            }
+            
+            .dona-menu {
+                top: 5px;
+                right: 5px;
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- EL MENÚ HAMBURGUESA AHORA ESTÁ DENTRO DEL CONTENEDOR DE FOTO EN EL HTML -->
+
+    <!-- OVERLAY DEL MENÚ MÓVIL -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- CONTENEDOR DEL MENÚ MÓVIL -->
+    <div class="mobile-menu-container" id="mobileMenuContainer">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-title">NAVIGATION</div>
+            <button class="mobile-close-btn" id="mobileCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- MENÚ PRINCIPAL MÓVIL -->
+        <div class="mobile-nav">
+            <button class="mobile-nav-link active" data-seccion="personal_profile">
+                <i class="fas fa-user-circle"></i> Personal Profile
+            </button>
+            <button class="mobile-nav-link" data-seccion="academic_record">
+                <i class="fas fa-graduation-cap"></i> Academic Record
+            </button>
+            <button class="mobile-nav-link" data-seccion="work_experience_high_schools">
+                <i class="fas fa-school"></i> Work Experience in High Schools
+            </button>
+            <button class="mobile-nav-link" data-seccion="work_experience_universities">
+                <i class="fas fa-university"></i> Work Experience in Universities
+            </button>
+            <button class="mobile-nav-link" data-seccion="employment_experiences">
+                <i class="fas fa-briefcase"></i> Employment Experiences
+            </button>
+            <button class="mobile-nav-link" data-seccion="personal_references">
+                <i class="fas fa-user-friends"></i> Personal References
+            </button>
+            <button class="mobile-nav-link" data-seccion="family_references">
+                <i class="fas fa-users"></i> Family References
+            </button>
+        </div>
+
+        <!-- BOTONES ADICIONALES MÓVILES -->
+        <div class="mobile-additional-buttons">
+            <button class="mobile-additional-btn" data-seccion="certifications">
+                <i class="fas fa-certificate"></i> Certifications
+            </button>
+            <button class="mobile-additional-btn" data-seccion="skills">
+                <i class="fas fa-tools"></i> Skills & Expertise
+            </button>
+            <button class="mobile-additional-btn" data-seccion="publications">
+                <i class="fas fa-book"></i> Publications
+            </button>
+            <button class="mobile-additional-btn" data-seccion="projects">
+                <i class="fas fa-project-diagram"></i> Projects
+            </button>
+            <button class="mobile-additional-btn" data-seccion="languages">
+                <i class="fas fa-language"></i> Languages
+            </button>
+            <button class="mobile-additional-btn" data-seccion="awards">
+                <i class="fas fa-award"></i> Awards
+            </button>
+            <button class="mobile-additional-btn" data-seccion="training">
+                <i class="fas fa-graduation-cap"></i> Training
+            </button>
+        </div>
+    </div>
+
+    <div class="marco">
+        <div class="marco-interior">
+            <!-- COLUMNA IZQUIERDA - 35% -->
+            <div class="izquierda">
+                <!-- ÁREA SCROLLABLE DE LA IZQUIERDA -->
+                <div class="izquierda-scrollable">
+                    <!-- CONTENEDOR SUPERIOR: FOTO + CONTACTO -->
+                    <div class="contenedor-superior">
+                        <!-- FOTO CON EFECTO FLIP Y DONA DENTRO -->
+                        <div class="foto-contenedor">
+                            <!-- DONA/MENÚ HAMBURGUESA DENTRO DEL CONTENEDOR DE FOTO -->
+                            <div class="dona-menu" id="donaMenu">
+                                <div class="dona-line"></div>
+                                <div class="dona-line"></div>
+                                <div class="dona-line"></div>
+                            </div>
+                            
+                            <div class="photo-container" id="photoContainer">
+                                <div class="photo-flip-inner">
+                                    <div class="photo-front">
+                                        <img src="images/Photo.jpg" 
+                                             alt="Miguel Díaz - Mathematics Teacher" 
+                                             class="profile-photo" 
+                                             id="profilePhoto">
+                                    </div>
+                                    <div class="photo-back">
+                                        <div class="name-display">
+                                            Miguel Díaz
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NOMBRE Y TÍTULO (SE MUEVE AQUÍ PARA MÓVILES) -->
+                        <div class="nombre-contenedor">
+                            <h1 class="nombre">Miguel Ignacio Díaz Campaña</h1>
+                            <div class="nombre-subtitulo">Bilingual Math Teacher</div>
+                        </div>
+
+                        <!-- CONTENEDOR DE CONTACTO -->
+                        <div class="contact-section-container">
+                            <div class="section-title-container">
+                                <div class="section-title">CONTACT ME</div>
+                                <div class="section-subtitle">Get in touch with me</div>
+                            </div>
+                            
+                            <div class="contact-info">
+                                <div class="address-container">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="address-lines">
+                                        <span class="address-line">Kra 69D # 96 - 39</span>
+                                        <span class="address-line">La Floresta - Bogotá</span>
+                                    </div>
+                                </div>
+                                
+                                <p><i class="fas fa-envelope"></i> <span>midc2001@gmail.com</span></p>
+                                <p><i class="fas fa-phone"></i> <span>+57 321 264 78 92</span></p>
+                                
+                                <a href="https://www.linkedin.com/in/miguel-i-díaz-c-88677a23b" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>linkedin.com/in/miguel-i-díaz-c-88677a23b</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTENEDOR DE CURRICULUM VITAE (OCULTO EN MÓVILES/TABLETS) -->
+                    <div class="cv-section-container">
+                        <div class="section-title-container">
+                            <div class="section-title">CURRICULUM VITAE</div>
+                            <div class="section-subtitle">Professional Portfolio</div>
+                        </div>
+                        
+                        <!-- BOTONES DE NAVEGACIÓN (CON ÍCONOS AMARILLOS) -->
+                        <ul id="navbar">
+                            <li><button class="nav-link active" data-seccion="personal_profile">
+                                <i class="fas fa-user-circle"></i> Personal Profile
+                            </button></li>
+                            <li><button class="nav-link" data-seccion="academic_record">
+                                <i class="fas fa-graduation-cap"></i> Academic Record
+                            </button></li>
+                            <li><button class="nav-link" data-seccion="work_experience_high_schools">
+                                <i class="fas fa-school"></i> Work Experience in High Schools
+                            </button></li>
+                            <li><button class="nav-link" data-seccion="work_experience_universities">
+                                <i class="fas fa-university"></i> Work Experience in Universities
+                            </button></li>
+                            <li><button class="nav-link" data-seccion="employment_experiences">
+                                <i class="fas fa-briefcase"></i> Employment Experiences
+                            </button></li>
+                            <li><button class="nav-link" data-seccion="personal_references">
+                                <i class="fas fa-user-friends"></i> Personal References
+                            </button></li>
+                            <li><button class="nav-link" data-seccion="family_references">
+                                <i class="fas fa-users"></i> Family References
+                            </button></li>
+                        </ul>
+                        
+                        <!-- BOTONES ADICIONALES (ÍCONOS AMARILLOS) -->
+                        <div class="additional-buttons-container">
+                            <button class="additional-btn" data-seccion="certifications">
+                                <i class="fas fa-certificate"></i> Certifications
+                            </button>
+                            <button class="additional-btn" data-seccion="skills">
+                                <i class="fas fa-tools"></i> Skills & Expertise
+                            </button>
+                            <button class="additional-btn" data-seccion="publications">
+                                <i class="fas fa-book"></i> Publications
+                            </button>
+                            <button class="additional-btn" data-seccion="projects">
+                                <i class="fas fa-project-diagram"></i> Projects
+                            </button>
+                            <button class="additional-btn" data-seccion="languages">
+                                <i class="fas fa-language"></i> Languages
+                            </button>
+                            <button class="additional-btn" data-seccion="awards">
+                                <i class="fas fa-award"></i> Awards
+                            </button>
+                            <button class="additional-btn" data-seccion="training">
+                                <i class="fas fa-graduation-cap"></i> Training
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA - 65% -->
+            <div class="derecha">
+                <!-- NOMBRE Y TÍTULO (SOLO VISIBLE EN DESKTOP) -->
+                <div class="nombre-contenedor nombre-desktop">
+                    <h1 class="nombre">Miguel Ignacio Díaz Campaña</h1>
+                    <div class="nombre-subtitulo">Bilingual Math Teacher</div>
+                </div>
+
+                <!-- ÁREA SCROLLABLE DE LA DERECHA -->
+                <div class="derecha-scrollable">
+                    <!-- CONTENIDO DE LAS SECCIONES -->
+                    <div class="contenido-secciones">
+                        <!-- PERSONAL PROFILE -->
+                        <section id="personal_profile" class="contenido-seccion activa">
+                            <header>Personal Profile</header>
+                            <p>Experienced Mathematics Teacher with expertise in Algebra, Geometry, and Calculus</p>
+                            <p>Passionate educator with over 10 years of experience in secondary and university level teaching. Specialized in making complex mathematical concepts accessible to students of all levels. Committed to innovative teaching methods and integrating technology in the classroom.</p>
+                            <p>Strong track record of improving student performance and engagement through personalized instruction and creative problem-solving approaches.</p>
+                            <p>Dedicated professional with excellent communication skills and a collaborative approach to working with students, parents, and colleagues.</p>
+                        </section>
+
+                        <!-- ACADEMIC RECORD -->
+                        <section id="academic_record" class="contenido-seccion">
+                            <header>Academic Record</header>
+                            <p>Bachelor of Science in Mathematics</p>
+                            <p>University of Example, 2010-2014. Specialized in Mathematics Education and Applied Mathematics. Graduated with Honors (Magna Cum Laude). Thesis: "Innovative Approaches to Teaching Calculus to High School Students".</p>
+                            <p>Master of Education in Curriculum and Instruction</p>
+                            <p>Example State University, 2015-2017. Focus on Educational Technology and Advanced Teaching Methodologies. Research project: "The Impact of Technology Integration on Mathematics Learning Outcomes".</p>
+                            <p>Teaching Certification - Mathematics (Grades 6-12)</p>
+                            <p>State Education Board, 2014. Certified to teach Mathematics at secondary level with specialization in differentiated instruction and assessment strategies.</p>
+                        </section>
+
+                        <!-- WORK EXPERIENCE IN HIGH SCHOOLS -->
+                        <section id="work_experience_high_schools" class="contenido-seccion">
+                            <header>Work Experience in High Schools</header>
+                            <p>London High School - Mathematics Department Head (2018-Present)</p>
+                            <p>Lead mathematics teacher for grades 9-12. Developed and implemented curriculum for Algebra I & II, Geometry, and Pre-Calculus. Improved student pass rates by 25% through innovative teaching methods and after-school tutoring programs. Supervised 5 mathematics teachers and coordinated departmental professional development.</p>
+                            <p>City Preparatory Academy - Mathematics Teacher (2015-2018)</p>
+                            <p>Taught Geometry and Algebra to diverse student populations. Implemented project-based learning and technology integration. Coached math team to regional championships three consecutive years. Developed after-school enrichment program for advanced students.</p>
+                            <p>Central High School - Mathematics Teacher (2014-2015)</p>
+                            <p>Taught introductory mathematics courses. Implemented formative assessment strategies and differentiated instruction. Participated in school-wide technology integration initiative.</p>
+                        </section>
+
+                        <!-- WORK EXPERIENCE IN UNIVERSITIES -->
+                        <section id="work_experience_universities" class="contenido-seccion">
+                            <header>Work Experience in Universities</header>
+                            <p>Great Colombia University - Adjunct Professor (2019-Present)</p>
+                            <p>Teach College Algebra and Calculus I to undergraduate students. Developed online learning modules and interactive assessment tools. Received "Excellence in Teaching" award in 2021. Supervised undergraduate research projects in mathematics education.</p>
+                            <p>Technical Institute of Mathematics - Guest Lecturer (2017-2019)</p>
+                            <p>Conducted workshops on mathematical modeling and problem-solving strategies for engineering students. Collaborated on research projects in mathematics education. Published two papers on teaching methodologies.</p>
+                            <p>National University - Teaching Assistant (2013-2014)</p>
+                            <p>Assisted professors in teaching introductory mathematics courses. Conducted tutoring sessions and graded assignments. Developed supplemental teaching materials for students.</p>
+                        </section>
+
+                        <!-- EMPLOYMENT EXPERIENCES -->
+                        <section id="employment_experiences" class="contenido-seccion">
+                            <header>Employment Experiences</header>
+                            <p>Educational Consultant - Math Solutions Inc. (2020-Present)</p>
+                            <p>Provide consulting services to schools implementing new mathematics curricula. Develop training materials for teachers and conduct professional development workshops. Assist in curriculum evaluation and improvement.</p>
+                            <p>Textbook Author - Educational Publishing House (2019-2020)</p>
+                            <p>Co-authored "Mathematics for the 21st Century Learner" textbook for high school students. Developed interactive exercises and real-world application problems. Created teacher's guide with lesson plans and assessment tools.</p>
+                            <p>Summer Mathematics Camp Director (2016-2019)</p>
+                            <p>Directed summer enrichment programs for gifted mathematics students. Developed curriculum focusing on problem-solving and mathematical reasoning. Supervised teaching staff and coordinated program logistics.</p>
+                        </section>
+
+                        <!-- PERSONAL REFERENCES -->
+                        <section id="personal_references" class="contenido-seccion">
+                            <header>Personal References</header>
+                            <p>Dr. Angela Poveda - Department Chair</p>
+                            <p>Mathematics Department, London High School. apoveda@londonhs.edu | +1 234 567 8901</p>
+                            <p>Prof. Carlos Mendez - Dean of Sciences</p>
+                            <p>Faculty of Sciences, Great Colombia University. cmendez@gcuniversity.edu | +1 234 567 8902</p>
+                            <p>Ms. Sarah Johnson - Education Director</p>
+                            <p>Regional Education District. sjohnson@edudistrict.gov | +1 234 567 8903</p>
+                            <p>Mr. Robert Chen - Principal</p>
+                            <p>City Preparatory Academy. rchen@cityprep.edu | +1 234 567 8904</p>
+                        </section>
+
+                        <!-- FAMILY REFERENCES -->
+                        <section id="family_references" class="contenido-seccion">
+                            <header>Family References</header>
+                            <p>Mr. Alejandro Díaz - Father</p>
+                            <p>Retired Engineer. alejandro.diaz@email.com | +57 300 123 4567</p>
+                            <p>Mrs. María Campaña - Mother</p>
+                            <p>School Administrator (Retired). maria.campana@email.com | +57 310 987 6543</p>
+                            <p>Ms. Catalina Díaz - Sister</p>
+                            <p>University Professor. catalina.diaz@email.com | +57 315 456 7890</p>
+                            <p>Mr. José Díaz - Brother</p>
+                            <p>Business Consultant. jose.diaz@email.com | +57 320 111 2233</p>
+                        </section>
+
+                        <!-- CERTIFICATIONS -->
+                        <section id="certifications" class="contenido-seccion">
+                            <header>Certifications</header>
+                            <p>Advanced Mathematics Teaching Certification</p>
+                            <p>National Board for Professional Teaching Standards, 2020. Certification in advanced mathematics pedagogy and assessment strategies.</p>
+                            <p>Educational Technology Specialist</p>
+                            <p>International Society for Technology in Education, 2019. Certification in integrating technology into mathematics curriculum.</p>
+                            <p>ESL Teaching Certification</p>
+                            <p>TESOL International Association, 2018. Certification for teaching English as a Second Language to mathematics students.</p>
+                        </section>
+
+                        <!-- SKILLS -->
+                        <section id="skills" class="contenido-seccion">
+                            <header>Skills & Expertise</header>
+                            <p>Mathematics Subject Areas</p>
+                            <p>Algebra I & II, Geometry, Trigonometry, Pre-Calculus, Calculus, Statistics, Linear Algebra, Differential Equations</p>
+                            <p>Teaching Methodologies</p>
+                            <p>Differentiated Instruction, Project-Based Learning, Flipped Classroom, Technology Integration, Formative Assessment, Collaborative Learning</p>
+                            <p>Technical Skills</p>
+                            <p>GeoGebra, Desmos, MATLAB, LaTeX, Google Classroom, Microsoft Office Suite, Learning Management Systems</p>
+                        </section>
+
+                        <!-- PUBLICATIONS -->
+                        <section id="publications" class="contenido-seccion">
+                            <header>Publications</header>
+                            <p>"Innovative Approaches to Teaching Calculus" (2022)</p>
+                            <p>Journal of Mathematics Education, Volume 45, Issue 3. Peer-reviewed article on modern calculus teaching methods.</p>
+                            <p>"Mathematics for the 21st Century Learner" (2020)</p>
+                            <p>Textbook published by Educational Publishing House. Used in over 50 high schools nationwide.</p>
+                            <p>"Technology Integration in Mathematics Classrooms" (2019)</p>
+                            <p>Proceedings of International Conference on Educational Technology. Research paper on effective use of technology in math education.</p>
+                        </section>
+
+                        <!-- PROJECTS -->
+                        <section id="projects" class="contenido-seccion">
+                            <header>Projects</header>
+                            <p>Mathematics Enrichment Program Development (2021-Present)</p>
+                            <p>Developed and implemented after-school enrichment program for gifted mathematics students. Program includes advanced topics and competition preparation.</p>
+                            <p>Online Learning Module Development (2020)</p>
+                            <p>Created comprehensive online learning modules for Algebra and Geometry courses during remote learning period. Modules used by over 200 students.</p>
+                            <p>Curriculum Redesign Initiative (2019)</p>
+                            <p>Led school-wide mathematics curriculum redesign to align with Common Core standards and incorporate technology integration.</p>
+                        </section>
+
+                        <!-- LANGUAGES -->
+                        <section id="languages" class="contenido-seccion">
+                            <header>Languages</header>
+                            <p>Spanish</p>
+                            <p>Native proficiency. Fluent in both written and spoken Spanish for teaching and professional communication.</p>
+                            <p>English</p>
+                            <p>Advanced proficiency (C1 Level). Fluent in academic and professional English. Certified ESL teacher.</p>
+                            <p>French</p>
+                            <p>Intermediate proficiency (B1 Level). Basic conversational and reading skills.</p>
+                        </section>
+
+                        <!-- AWARDS -->
+                        <section id="awards" class="contenido-seccion">
+                            <header>Awards</header>
+                            <p>Excellence in Teaching Award (2021)</p>
+                            <p>Great Colombia University. Awarded for outstanding teaching performance and student engagement.</p>
+                            <p>Mathematics Department Leadership Award (2019)</p>
+                            <p>London High School. Recognized for leadership in department development and student achievement improvement.</p>
+                            <p>Innovative Educator Award (2018)</p>
+                            <p>Regional Education District. Awarded for innovative use of technology in mathematics instruction.</p>
+                        </section>
+
+                        <!-- TRAINING -->
+                        <section id="training" class="contenido-seccion">
+                            <header>Training & Professional Development</header>
+                            <p>Advanced Mathematics Pedagogy Workshop (2022)</p>
+                            <p>National Council of Teachers of Mathematics. Intensive training on advanced teaching strategies for secondary mathematics.</p>
+                            <p>Educational Technology Summit (2021)</p>
+                            <p>International Society for Technology in Education. Training on latest educational technologies and their application in mathematics.</p>
+                            <p>Differentiated Instruction Masterclass (2020)</p>
+                            <p>Harvard Graduate School of Education. Advanced training on differentiated instruction strategies for diverse classrooms.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función para mostrar una sección
+            function showSection(sectionId) {
+                const sections = document.querySelectorAll('.contenido-seccion');
+                const navLinks = document.querySelectorAll('.nav-link');
+                const additionalBtns = document.querySelectorAll('.additional-btn');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+                const mobileAdditionalBtns = document.querySelectorAll('.mobile-additional-btn');
+                
+                // Ocultar todas las secciones
+                sections.forEach(section => {
+                    section.classList.remove('activa');
+                });
+                
+                // Mostrar la sección solicitada
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('activa');
+                    
+                    // Hacer scroll al inicio del contenedor scrollable
+                    const derechaScrollable = document.querySelector('.derecha-scrollable');
+                    if (derechaScrollable) {
+                        derechaScrollable.scrollTop = 0;
+                    }
+                }
+                
+                // Actualizar botón activo en nav-links (desktop)
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-seccion') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Actualizar botón activo en additional-btns (desktop)
+                additionalBtns.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-seccion') === sectionId) {
+                        btn.classList.add('active');
+                    }
+                });
+                
+                // Actualizar botón activo en mobile-nav-links
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-seccion') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Actualizar botón activo en mobile-additional-btns
+                mobileAdditionalBtns.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-seccion') === sectionId) {
+                        btn.classList.add('active');
+                    }
+                });
+                
+                // Cerrar menú móvil después de seleccionar una sección
+                closeMobileMenu();
+            }
+            
+            // Funciones para el menú móvil
+            const donaMenu = document.getElementById('donaMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuContainer = document.getElementById('mobileMenuContainer');
+            const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+            
+            function openMobileMenu() {
+                donaMenu.classList.add('active');
+                mobileMenuOverlay.classList.add('active');
+                mobileMenuContainer.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                donaMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                mobileMenuContainer.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Event listeners para el menú móvil
+            donaMenu.addEventListener('click', openMobileMenu);
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            mobileCloseBtn.addEventListener('click', closeMobileMenu);
+            
+            // Event listeners para TODOS los botones con data-seccion
+            document.querySelectorAll('[data-seccion]').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-seccion');
+                    showSection(sectionId);
+                });
+            });
+            
+            // Mostrar primera sección por defecto
+            showSection('personal_profile');
+            
+            // Cerrar menú móvil al presionar ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
